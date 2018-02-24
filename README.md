@@ -18,3 +18,10 @@ Base64加解密
 + (NSString*)decodeBase64String:(NSString *)input;
 + (NSString*)encodeBase64Data:(NSData *)data;
 + (NSString*)decodeBase64Data:(NSData *)data;
+
+4）没有导包 CommonDigest.h 的时候
+CC_MD5( cStr, strlen(cStr),result);
+提示如下:
+Implicit declaration of function 'CC_MD5' is invalid in C99
+//导入这个就行了
+#import <CommonCrypto/CommonDigest.h>
